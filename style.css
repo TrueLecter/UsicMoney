@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color:#ffffff;
+}
+form{
+	position: absolute;
+	left: 115px;
+	top: 31px;
+	height: 224px;
+	width: 818px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+table{
+	list-style: square;
+}
+a:link {
+	font-family: Comic Sans MS, cursive;
+}
+alt2{ margin: 10px;  padding: 6px;  border: 1px inset;}
+smallfont{margin-bottom:2px;}
+spoil{margin:20px; margin-top:15px;}
+.wrapper
+  margin: 0 auto
+  padding: 40px
+  max-width: 800px
+
+.table
+  margin: 0 0 40px 0
+  width: 100%
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2)
+  display: table
+  @media screen and (max-width: 580px)
+    display: block
+
+.row
+  display: table-row
+  background: #f6f6f6
+  &:nth-of-type(odd)
+    background: #e9e9e9
+  &.header
+    font-weight: 900
+    color: #ffffff
+    background: #ea6153
+  &.blue
+    background: #2980b9
+  @media screen and (max-width: 580px)
+    padding: 8px 0
+    display: block
+
+.cell
+  padding: 6px 12px
+  display: table-cell
+  @media screen and (max-width: 580px)
+    padding: 2px 12px
+    display: block
+	
