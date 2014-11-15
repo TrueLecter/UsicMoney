@@ -32,6 +32,7 @@
                             <a href="selection.php">&#1050;&#1072;&#1089;&#1080;</a>
                         </li>
                     </ul>
+                </ul>
                 </div>
             </nav>
             <div style="display: block; padding:0.75%;"></div>
@@ -87,6 +88,6 @@
                     </table>
                 </form>
             </center>
-        </div>
+        </div>       
     </body>
 </html>

@@ -7,8 +7,8 @@ function getMoney() {
 	disableForm();
 	$.ajax({
 		type: "POST",
-		url: "getMoney_ajax.php",
 		data: msg,
+		url: "includes/getMoney_ajax.php",
 		dataType: 'json',
 		success: function(data) {
 			if (data.msg == "") {

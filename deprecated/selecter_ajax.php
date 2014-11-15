@@ -78,6 +78,9 @@
 		}
 		$i = $i + 1;
 	}
+	if ($i == 0){
+		$table="<div><h4>Ще не було жодного запиту!</h4></div>";
+	}
 	$table.= "</div>";
 
 	$pagination = '<div class="pagination pagination-info">';

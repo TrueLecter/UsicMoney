@@ -10,7 +10,7 @@
     <link href="css/the-tooltip.css" rel="stylesheet" />
     <link href="css/loader.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="https://usic.at/favicon.ico">
-    <script src="js/_customUtils_ajax.js"></script>
+    <script src="js/_customUtils_ajax_iJson.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/flat-ui.min.js"></script>
     <script src="js/application.js"></script>

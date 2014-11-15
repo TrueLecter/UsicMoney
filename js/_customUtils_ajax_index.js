@@ -1,9 +1,13 @@
+var dataMsg = "";
+var resultM = "";
+
 function sendMoney() {
 	var msg = $("#form").serialize();
+	dataMsg = msg;
 	disableForm();
 	$.ajax({
 		type: "POST",
-		url: "add_ajax.php",
+		url: "includes/add_ajax.php",
 		data: msg,
 		dataType: 'json',
 		success: function(data) {
@@ -25,6 +29,7 @@ function sendMoney() {
 			$("#result").animate({
 				color: 'red'
 			}, 500);
+			resultM = thrownError+"\n"+xhr.responseText;
 			enableForm();
 		}
 	});
