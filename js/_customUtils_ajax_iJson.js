@@ -78,7 +78,7 @@ function processResponce(resultJSON) {
 function processsPaging(menu) {
 	var inHtml = "<div class=\"pagination pagination-info\">\n<ul><li><a href=\"#\" onclick=\"changePage(0)\"><i class=\"fui-arrow-left\"></i><i class=\"fui-arrow-left\"></i></a></li>\n";
 	for (var key in menu) {
-		if (key == "total"){
+		if (key == "total") {
 			continue;
 		}
 		if (menu[key]["active"] == "true") {
@@ -93,13 +93,27 @@ function processsPaging(menu) {
 function processsTable(menu) {
 	var inHtml = "<div class=\"wrapper\"><div class=\"table\" style=\"border-radius: 10px;\">\n<div class=\"row header\">\n<div class=\"cell\">ПІБ</div>\n<div class=\"cell\">Кошти</div>\n<div class=\"cell\">Дата та час</div></div>\n";
 	for (var key in menu) {
+		var tt1 = "";
+		var tt2 = "";
+		if (tooltipCheck(menu[key]["tt"])) {
+			tt1 = " the-tooltip top right sky-blue";
+			tt2 = "<div>" + menu[key]["tt"] + "</div>";
+		}
 		if (menu[key]["minus"] == " ") {
-			inHtml = inHtml + "\n<div class=\"row the-tooltip top right sky-blue\" style=\"background: none repeat scroll 0% 0% #FF905A;\"><div class=\"cell\">" + menu[key]["name"] + "</div><div class=\"cell\">" + menu[key]["money"] + "</div><div class=\"cell\">" + menu[key]["date"] + "</div><div>" + menu[key]["tt"] + "</div></div>";
+			inHtml = inHtml + "\n<div class=\"row" + tt1 + "\" style=\"background: none repeat scroll 0% 0% #FF905A;\"><div class=\"cell\">" + menu[key]["name"] + "</div><div class=\"cell\">" + menu[key]["money"] + "</div><div class=\"cell\">" + menu[key]["date"] + "</div>" + tt2 + "</div>";
 		} else {
-			inHtml = inHtml + "\n<div class=\"row the-tooltip top right sky-blue\"><div class=\"cell\">" + menu[key]["name"] + "</div><div class=\"cell\">" + menu[key]["money"] + "</div><div class=\"cell\">" + menu[key]["date"] + "</div><div>" + menu[key]["tt"] + "</div></div>";
+			inHtml = inHtml + "\n<div class=\"row" + tt1 + "\"><div class=\"cell\">" + menu[key]["name"] + "</div><div class=\"cell\">" + menu[key]["money"] + "</div><div class=\"cell\">" + menu[key]["date"] + "</div>" + tt2 + "</div>";
 		}
 	}
 	return inHtml + "</div>";
+}
+
+function tooltipCheck(str) {
+	if (!$.trim(str)) {
+		return false;
+	} else {
+		return true;
+	}
 }
 
 function processMenu(menu) {

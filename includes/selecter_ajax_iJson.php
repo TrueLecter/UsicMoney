@@ -60,9 +60,9 @@ while ($i < $perPage && $row = mysqli_fetch_array($res)) {
 	if ($row["timeStamp"] > $r) {
 		$tooltip = $row["comment"];
 		if ($row["money"] < 0) {
-			$table[] = array('name' => strip_tags($row["name"]), 'money' => strip_tags($row["money"]), 'date' => strip_tags($row["dateTime"]), 'tt' => strip_tags($row["tooltip"]), 'minus' => " ");
+			$table[] = array('name' => strip_tags($row["name"]), 'money' => strip_tags($row["money"]), 'date' => strip_tags($row["dateTime"]), 'tt' => strip_tags($tooltip), 'minus' => " ");
 		} else {
-			$table[] = array('name' => strip_tags($row["name"]), 'money' => strip_tags($row["money"]), 'date' => strip_tags($row["dateTime"]), 'tt' => strip_tags($row["tooltip"]));
+			$table[] = array('name' => strip_tags($row["name"]), 'money' => strip_tags($row["money"]), 'date' => strip_tags($row["dateTime"]), 'tt' => strip_tags($tooltip));
 		}
 	}
 	$i = $i + 1;
