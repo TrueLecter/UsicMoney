@@ -119,7 +119,7 @@
         <div id="incasation">
             <div style="display: block; padding:0.75%;"></div>
             <center>
-                <h3 id="resultG">Зняти гроші</h3>
+                <h3 id="mamka">Зняти гроші</h3>
                 <div style="display: block; padding:1.5%;"></div>
                 <form name="addForm" onsubmit="getMoney();" action="javascript:void(0);" id="formG">
                     <table>

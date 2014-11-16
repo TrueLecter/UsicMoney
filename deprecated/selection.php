@@ -10,16 +10,16 @@
     <link href="css/the-tooltip.css" rel="stylesheet" />
     <link href="css/loader.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="https://usic.at/favicon.ico">
-    <script src="js/_customUtils_ajax.js"></script>
+    <script src="js/_customUtils.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/flat-ui.min.js"></script>
     <script src="js/application.js"></script>
     <script src="js/the-tooltip.js"></script>
     <script type="text/javascript">
-    	$(document).ready(function(){
-    			$("#loader").hide();
-    			sendRequest();
-    	});
+        $(document).ready(function(){
+                $("#loader").hide();
+                sendRequest();
+        });
     </script>
 </head>
 <body>
@@ -41,7 +41,7 @@
                     <li class="active"><a href="#">&#1050;&#1072;&#1089;&#1080;</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <ul id="menusNSum" class="nav navbar-nav navbar-right">
                     <li class="dropdown" id="rangeMenu">
 
                     </li>
@@ -49,7 +49,7 @@
                     
                     </li>
                     <li>
-                     	<a href="#" id="totalValue"></a>
+                        <a href="#" id="totalValue"></a>
                     </li>
                 </ul>
             </div>
@@ -77,9 +77,7 @@
                         </div>
                         <div id="circularG_8" class="circularG">
                         </div>
-                    </div></center>-->
-                </div>
-
+                    </div></center>--></div>
 </body>
 
 </html>
